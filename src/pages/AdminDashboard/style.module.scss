@@ -1,5 +1,6 @@
 .AdminMain {
-  background-color: #253750;
+  // background-color: #253750;
+  background-color: white;
   height: 100%;
 }
 .pfp {
@@ -12,10 +13,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
   padding-bottom: 50px;
   .Right {
-    color: white;
+    color: black  ;
     font-size: 200%;
   }
 }
@@ -27,25 +28,25 @@
   padding-top: 30px;
   font-size: 30px;
   .AddOption {
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
   }
   .Search {
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     height: 300px;
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
@@ -53,27 +54,27 @@
   .Users {
     transition: 0.3s;
 
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     height: 300px;
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 8px;
     cursor: pointer;
   }
   .Orders {
     border-radius: 8px;
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
     height: 300px;
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid black;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -82,15 +83,8 @@
   }
   .Bars {
     display: flex;
-    justify-content: center;  // Centers the BarChart horizontally
-    padding: 20px;  // Adds padding around the BarChart
+    justify-content: center;
+    padding: 20px; 
   }
   
-  .BarChartContainer {
-    background-color: white;  // Sets the background color to white
-    border-radius: 8px;  // Optional: Adds rounded corners to the background
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  // Optional: Adds a subtle shadow
-    padding: 20px;  // Adds padding inside the container
-    width: 100%;  // Ensures the BarChart takes full width of the container
-  }
 }

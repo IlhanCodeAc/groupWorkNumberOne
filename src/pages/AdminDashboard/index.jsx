@@ -2,7 +2,6 @@ import React from "react";
 import Container from "../../components/Container";
 import styles from "./style.module.scss";
 import identIcon from "./imgs/identIcon.png";
-import BarChart from '../../components/BarChart'
 
 const AdminDashboard = () => {
   return (
