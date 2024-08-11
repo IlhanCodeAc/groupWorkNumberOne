@@ -2,6 +2,7 @@ import React from "react";
 import MainLayout from "../components/MainLayout";
 import Productos from "../pages/Productos";
 import Ventas from "../pages/Ventas";
+import AdminDashboard from "../pages/AdminDashboard";
 
 export const ROUTES = [
   {
