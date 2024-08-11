@@ -1,14 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Container from "../../components/Container";
 import styles from "./style.module.scss";
 import { useEffect } from "react";
 import AddProduct from "../../components/AddProduct";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductsAction} from "../../redux/features/actions/productActions";
+import { getProductsAction } from "../../redux/features/actions/productActions";
 import { MdDeleteOutline } from "react-icons/md";
 import { Button } from "@mui/material";
 import { deleteProductsAction } from "../../redux/features/actions/deleteAction";
-
 
 const Productos = () => {
   const dispatch = useDispatch();
@@ -16,11 +16,12 @@ const Productos = () => {
 
   useEffect(() => {
     dispatch(getProductsAction());
-  }, []);
+  }, [dispatch]);
 
- const handleDelete = (id) => {
+  const handleDelete = (id) => {
     dispatch(deleteProductsAction({ id }));
   };
+
   return (
     <>
       <Container>
@@ -55,12 +56,15 @@ const Productos = () => {
                       <div className={styles.Price}>
                         <h3 className={styles.PriceText}>{data.price}$</h3>
                       </div>
-                      <Button
-                        sx={{ backgroundColor: "black" }}
-                        variant="contained"
-                      >
-                        Edit
+                      <Button color="success" variant="contained" size="small">
+                        <Link
+                          style={{ textDecoration: "none", color: "white" }}
+                          to={`/edit/${data.id}`}
+                        >
+                          Edit
+                        </Link>
                       </Button>
+
                       <MdDeleteOutline
                         className={styles.delete}
                         onClick={() => handleDelete(data.id)}
