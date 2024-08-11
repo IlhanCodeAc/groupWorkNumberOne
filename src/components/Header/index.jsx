@@ -8,6 +8,10 @@ const Header = () => {
     <>
       <div className={styles.header}>
         <div className={styles.head}>
+          <img
+            src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+            alt=""
+          />
           <ul>
             <li>
               <Link className={styles.link} to="/">
@@ -27,7 +31,9 @@ const Header = () => {
           </ul>
         </div>
         <div className={styles.icons}>
-    <VscAccount style={{color:"white",fontSize:"20px",cursor:"pointer"}}/>
+          <VscAccount
+            style={{ color: "white", fontSize: "20px", cursor: "pointer" }}
+          />
         </div>
       </div>
     </>
