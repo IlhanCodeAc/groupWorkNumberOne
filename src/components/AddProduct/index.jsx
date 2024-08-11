@@ -1,12 +1,12 @@
-import { Button } from '@mui/material';
-import React from 'react'
+import { Button } from "@mui/material";
+import React from "react";
 
 const AddProduct = () => {
   return (
     <>
-      <Button variant="contained">Add Product</Button>
+      <Button>Add Product</Button>
     </>
   );
-}
+};
 
-export default AddProduct
+export default AddProduct;

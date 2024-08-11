@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../../components/Container";
 import styles from "./style.module.scss";
 import { useState, useEffect } from "react";
+import AddProduct from "../../components/AddProduct";
 
 const Productos = () => {
   const [products, setProducts] = useState([]);
@@ -23,6 +24,7 @@ const Productos = () => {
         <main className={styles.productocontainer}>
           <header className={styles.productoshead}>
             <h3 className={styles.prodcutHeadText}>Available products</h3>
+            <AddProduct />
           </header>
           <div className={styles.Cards}>
             {products &&
