@@ -1,0 +1,96 @@
+.AdminMain {
+  background-color: #253750;
+  height: 100%;
+}
+.pfp {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.AdminHead {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  padding-bottom: 50px;
+  .Right {
+    color: white;
+    font-size: 200%;
+  }
+}
+.AdminOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 30px;
+  .AddOption {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .Search {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 300px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .Users {
+    transition: 0.3s;
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 300px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .Orders {
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 300px;
+    width: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  div:hover {
+    scale: 1.05;
+  }
+  .Bars {
+    display: flex;
+    justify-content: center;  // Centers the BarChart horizontally
+    padding: 20px;  // Adds padding around the BarChart
+  }
+  
+  .BarChartContainer {
+    background-color: white;  // Sets the background color to white
+    border-radius: 8px;  // Optional: Adds rounded corners to the background
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  // Optional: Adds a subtle shadow
+    padding: 20px;  // Adds padding inside the container
+    width: 100%;  // Ensures the BarChart takes full width of the container
+  }
+}
