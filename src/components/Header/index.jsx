@@ -5,6 +5,7 @@ const Header = () => {
     <div>
     <ul>
         <li>Dashboard</li>
+        <li>Products</li>
     </ul>
     </div>
   )
