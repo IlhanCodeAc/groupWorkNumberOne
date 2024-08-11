@@ -1,18 +1,17 @@
 import React from "react";
 import Container from "../../components/Container";
 import styles from "./style.module.scss";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import AddProduct from "../../components/AddProduct";
+import { useDispatch, useSelector } from "react-redux";
+import { getProductsAction } from "../../redux/features/actions/productActions";
 
 const Productos = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products.products);
+
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("data fetched");
-        setProducts([...data]);
-      });
+    dispatch(getProductsAction());
   }, []);
   return (
     <>
