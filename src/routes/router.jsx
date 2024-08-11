@@ -20,6 +20,9 @@ export const ROUTES = [
         path: "ventas",
         element: <Ventas />,
       },
+      { path: "adminpage",
+        element: <AdminDashboard />
+      }
     ],
   },
 ];
