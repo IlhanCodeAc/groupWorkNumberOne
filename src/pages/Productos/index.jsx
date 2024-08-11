@@ -3,6 +3,8 @@ import Container from "../../components/Container";
 import styles from "./style.module.scss";
 import { useState, useEffect } from "react";
 import AddProduct from "../../components/AddProduct";
+import { MdDeleteOutline } from "react-icons/md";
+import { Button } from "@mui/material";
 
 const Productos = () => {
   const [products, setProducts] = useState([]);
@@ -48,6 +50,8 @@ const Productos = () => {
                       <div className={styles.Price}>
                         <h3 className={styles.PriceText}>{data.price}$</h3>
                       </div>
+                      <Button sx={{backgroundColor:"black"}} variant="contained">Edit</Button>
+                      <MdDeleteOutline className={styles.delete} />
                     </div>
                   </div>
                 </div>
