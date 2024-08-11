@@ -24,7 +24,8 @@ export const ROUTES = [
       },
       { path: "admin",
         element: <AdminDashboard />
-      },   {
+      },
+      {
         path:"edit/:id",
         element:<Edit/>
       }
