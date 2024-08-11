@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Button, FormControl, InputLabel, MenuItem, TextField } from "@mui/material";
+import { Box, Button, FormControl, InputLabel, MenuItem, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import { productValidationSchema } from "../../validations/edit.validation";
 import { Select } from "antd";
@@ -9,7 +9,11 @@ import { Select } from "antd";
 const Edit = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [age, setAge] = useState("")
+  const [age, setAge] = useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
 
   const products = useSelector((state) => state.products.products);
 
@@ -31,21 +35,22 @@ const Edit = () => {
     },
     validationSchema: productValidationSchema,
     enableReinitialize: true,
-    onSubmit: (values, actions) => {
-      console.log(values);
-      console.log(actions);
-
+    onSubmit: (values) => {
+      const updatedProduct = {
+        ...values,
+        id: product.id,
+      };
+      dispatch(updatedProduct(updatedProduct)); 
     },
   });
+
 
   if (!product) {
     return <div>Loading...</div>;
   }
   
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+
 
   return (
     <div>
@@ -94,23 +99,24 @@ const Edit = () => {
           error={formik.touched.description && Boolean(formik.errors.description)}
           helperText={formik.touched.description && formik.errors.description}
         />
-        <FormControl fullWidth sx={{maxWidth:"350px"}}>
-  <InputLabel id="demo-simple-select-label">Clothes</InputLabel>
-  <Select
-  sx={{maxWidth:"350px"}}
-    labelId="demo-simple-select-label"
-    id="demo-simple-select"
-    value={age}
-    label="Clothes"
-    onChange={handleChange}
-  >
+    <Box sx={{ minWidth: 350 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Clothes</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Clothes"
+          onChange={handleChange}
+        >
     <MenuItem value={10}>Clothes</MenuItem>
     <MenuItem value={20}>Electronics</MenuItem>
     <MenuItem value={30}>Furniture</MenuItem>
     <MenuItem value={30}>Shoes</MenuItem>
     <MenuItem value={30}>Others</MenuItem>
-  </Select>
-</FormControl>
+        </Select>
+      </FormControl>
+    </Box>
         <TextField
           sx={{ width: "350px" }}
           id="image"
