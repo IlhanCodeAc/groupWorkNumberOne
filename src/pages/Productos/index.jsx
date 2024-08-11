@@ -44,7 +44,7 @@ const Productos = () => {
                     <div className={styles.FootHead}>
                       <h3 className={styles.ProductDesc}>
                         {data.description.length > 100
-                          ? data.description.substring(0, 50) + "..."
+                          ? data.description.substring(0, 200) + "..."
                           : data.description}
                       </h3>
                     </div>
