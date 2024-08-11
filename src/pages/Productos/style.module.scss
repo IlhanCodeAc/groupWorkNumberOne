@@ -90,17 +90,20 @@
     background-color: #444444;
     color: #ffffff;
   }
-  
+ 
 }
-.spinnerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.error {
-  color: red;
-  text-align: center;
-  margin: 20px;
-}
+ .Translate{
+    padding:10px;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+    margin-left: 10px;
+    transform: translate(0,-9px);
+  }
+  .Translate:hover{
+    background-color: white;
+    color: black;
+  }
