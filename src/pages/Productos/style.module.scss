@@ -1,5 +1,6 @@
 .productocontainer {
   padding-bottom: 20px;
+  ;
   .productoshead {
     .prodcutHeadText {
       font-size: 36px;
@@ -18,6 +19,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    margin-left:4.5% ;
     @media (max-width:1400px){
       grid-template-columns: 1fr 1fr;
     }
@@ -91,6 +93,18 @@
     color: #ffffff;
   }
  
+}
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 20px;
 }
  .Translate{
     padding:10px;
