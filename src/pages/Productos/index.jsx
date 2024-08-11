@@ -3,6 +3,7 @@ import Container from '../../components/Container'
 import styles from './style.module.scss'
 import { useState ,useEffect } from 'react'
 
+
 const Productos = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
