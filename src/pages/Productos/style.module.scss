@@ -48,3 +48,32 @@
     }
   }
 }
+
+.lightMode {  /* <-- Light mode styles */
+  background-color: #ffffff;
+  color: #000000;
+
+  .card {
+    background-color: #f0f0f0;
+  }
+
+  .PriceText {
+    background-color: black;
+    color: white;
+  }
+}
+
+.darkMode {  /* <-- Dark mode styles */
+  background-color: #121212;
+  color: #ffffff;
+
+  .card {
+    background-color: #333333;
+  }
+
+  .PriceText {
+    background-color: #444444;
+    color: #ffffff;
+  }
+  
+}

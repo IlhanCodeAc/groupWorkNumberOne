@@ -9,10 +9,12 @@ import { getProductsAction } from "../../redux/features/actions/productActions";
 import { MdDeleteOutline } from "react-icons/md";
 import { Button } from "@mui/material";
 import { deleteProductsAction } from "../../redux/features/actions/deleteAction";
+import { toggleDarkMode } from "../../redux/features/theme/themeSlice";
 
 const Productos = () => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products.products);
+  const darkMode = useSelector((state) => state.theme.darkMode);
 
   useEffect(() => {
     dispatch(getProductsAction());
@@ -20,6 +22,10 @@ const Productos = () => {
 
   const handleDelete = (id) => {
     dispatch(deleteProductsAction({ id }));
+ }
+
+const handleToggleDarkMode = () => {
+    dispatch(toggleDarkMode());
   };
 
   return (
@@ -29,9 +35,12 @@ const Productos = () => {
           @import
           url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiny5&display=swap');
         </style>
-        <main className={styles.productocontainer}>
+        <main className={`${styles.productocontainer} ${darkMode ? styles.darkMode : styles.lightMode}`}>
           <header className={styles.productoshead}>
             <h3 className={styles.prodcutHeadText}>Available products</h3>
+            <Button onClick={handleToggleDarkMode} variant="contained" sx={{ marginBottom: '20px' }}>
+              {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            </Button>
             <AddProduct />
           </header>
           <div className={styles.Cards}>
