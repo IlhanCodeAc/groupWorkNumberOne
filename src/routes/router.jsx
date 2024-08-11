@@ -3,6 +3,7 @@ import MainLayout from "../components/MainLayout";
 import Productos from "../pages/Productos";
 import Ventas from "../pages/Ventas";
 import AdminDashboard from "../pages/AdminDashboard";
+import Edit from "../pages/Edit";
 
 export const ROUTES = [
   {
@@ -23,6 +24,9 @@ export const ROUTES = [
       },
       { path: "admin",
         element: <AdminDashboard />
+      },   {
+        path:"edit/:id",
+        element:<Edit/>
       }
     ],
   },
