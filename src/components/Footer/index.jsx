@@ -8,7 +8,7 @@ const Footer = () => {
       <h3>Short links</h3>
       <ul className={styles["footer-list"]}>
         <Link className={styles.link} to="dashboard">Dashboard</Link>
-        <Link className={styles.link} to="products">Products</Link>
+        <Link className={styles.link} to="productos">Products</Link>
         <Link className={styles.link} to="ventas">Ventas</Link>
       </ul>
     </footer>

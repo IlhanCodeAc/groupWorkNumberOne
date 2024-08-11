@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import Container from "../../components/Container";
 import styles from "./style.module.scss";
 import { useEffect } from "react";
-import AddProduct from "../../components/AddProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsAction } from "../../redux/features/actions/productActions";
 import { MdDeleteOutline } from "react-icons/md";
 import { Button } from "@mui/material";
 import { deleteProductsAction } from "../../redux/features/actions/deleteAction";
 import { toggleDarkMode } from "../../redux/features/theme/themeSlice";
+import { FaRegMoon } from "react-icons/fa6";
+import { FaMoon } from "react-icons/fa6";
 
 const Productos = () => {
   const dispatch = useDispatch();
@@ -26,22 +27,25 @@ const Productos = () => {
 
 const handleToggleDarkMode = () => {
     dispatch(toggleDarkMode());
+    console.log('Dark Mode Toggled:', darkMode);
   };
+
 
   return (
     <>
+    <div className={darkMode ? styles.darkMode : styles.lightMode}>
       <Container>
         <style>
           @import
           url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiny5&display=swap');
         </style>
-        <main className={`${styles.productocontainer} ${darkMode ? styles.darkMode : styles.lightMode}`}>
+        <main className={styles.productocontainer}>
           <header className={styles.productoshead}>
             <h3 className={styles.prodcutHeadText}>Available products</h3>
             <Button onClick={handleToggleDarkMode} variant="contained" sx={{ marginBottom: '20px' }}>
-              {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              {darkMode ? <FaMoon style={{fontSize:"30px"}} /> : <FaRegMoon style={{fontSize:"30px"}} />}
             </Button>
-            <AddProduct />
+
           </header>
           <div className={styles.Cards}>
             {products &&
@@ -85,6 +89,8 @@ const handleToggleDarkMode = () => {
           </div>
         </main>
       </Container>
+    </div>
+      
     </>
   );
 };
