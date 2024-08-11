@@ -1,0 +1,17 @@
+.productocontainer {
+  .productoshead {
+    .prodcutHeadText {
+      font-size: 36px;
+      font-family: "Roboto";
+      margin-top: 20px;
+    }
+  }
+  .Cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    .cardImg img {
+      width: 100%;
+    }
+  }
+}
