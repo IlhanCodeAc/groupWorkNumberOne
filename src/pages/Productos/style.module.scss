@@ -4,6 +4,7 @@
       font-size: 36px;
       font-family: "Roboto";
       margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
   .Cards {
@@ -26,22 +27,25 @@
     .FootBottom {
       display: flex;
       justify-content: space-between;
-      margin-top: 15px;
       .PriceText {
         background-color: black;
         color: white;
         padding: 3px;
-        border-radius: 5px;
       }
     }
     .card {
       cursor: pointer;
       transition: 0.3s;
-      border: 2px solid #1f2937;
+      -webkit-box-shadow: 1px 1px 14px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 1px 1px 14px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 1px 1px 14px -1px rgba(0, 0, 0, 0.75);
       border-radius: 4px;
     }
     .card:hover {
-      scale: 0.96;
+      scale: 1.05;
+    }
+    .delete{
+      font-size:30px
     }
   }
 }

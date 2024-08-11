@@ -5,6 +5,9 @@ import { useEffect } from "react";
 import AddProduct from "../../components/AddProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsAction } from "../../redux/features/actions/productActions";
+import { MdDeleteOutline } from "react-icons/md";
+import { Button } from "@mui/material";
+
 
 const Productos = () => {
   const dispatch = useDispatch();
@@ -47,6 +50,8 @@ const Productos = () => {
                       <div className={styles.Price}>
                         <h3 className={styles.PriceText}>{data.price}$</h3>
                       </div>
+                      <Button sx={{backgroundColor:"black"}} variant="contained">Edit</Button>
+                      <MdDeleteOutline className={styles.delete} />
                     </div>
                   </div>
                 </div>
