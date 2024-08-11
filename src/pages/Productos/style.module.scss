@@ -6,12 +6,24 @@
       font-family: "Roboto";
       margin-top: 20px;
       margin-bottom: 20px;
+      @media (max-width:1080px){
+        font-size: 20px;
+      }
+      @media (max-width:768px){
+      font-size: 16px;
+      }
     }
   }
   .Cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    @media (max-width:1400px){
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width:768px){
+      grid-template-columns: 1fr;
+    }
     .cardImg img {
       width: 100%;
       border-top-left-radius: 4px;

@@ -32,6 +32,7 @@ const Productos = () => {
 
   return (
     <>
+
       <div className={darkMode ? styles.darkMode : styles.lightMode}>
         <Container>
           <main className={styles.productocontainer}>
@@ -95,6 +96,38 @@ const Productos = () => {
                             onClick={() => handleDelete(data.id)}
                           />
                         </div>
+
+    <div className={darkMode ? styles.darkMode : styles.lightMode}>
+      <Container>
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiny5&display=swap');
+        </style>
+        <main className={styles.productocontainer}>
+          <header className={styles.productoshead}>
+            <h3 className={styles.prodcutHeadText}>Available products</h3>
+            <Button onClick={handleToggleDarkMode} variant="contained" sx={{ marginBottom: '20px' }}>
+              {darkMode ? <FaMoon style={{fontSize:"30px"}} /> : <FaRegMoon style={{fontSize:"30px"}} />}
+            </Button>
+
+          </header>
+          <div className={styles.Cards}>
+            {products &&
+              products.map((data) => (
+                <div key={data.id} className={styles.card}>
+                  <div className={styles.cardImg}>
+                    <img src={data.category.image} alt={data.title} />
+                  </div>
+                  <div className={styles.cardFoot}>
+                    <div className={styles.FootHead}>
+                    </div>
+                    <div className={styles.FootBottom}>
+                      <div className={styles.NameCont}>
+                        <h4 className={styles.NameText}>{data.title}</h4>
+                      </div>
+                      <div className={styles.Price}>
+                        <h3 className={styles.PriceText}>{data.price}$</h3>
+
                       </div>
                     </div>
                   ))}
