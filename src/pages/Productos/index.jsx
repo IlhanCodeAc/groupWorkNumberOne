@@ -52,15 +52,15 @@ const handleToggleDarkMode = () => {
                   </div>
                   <div className={styles.cardFoot}>
                     <div className={styles.FootHead}>
-                      <h3 className={styles.ProductDesc}>
+                      {/* <h3 className={styles.ProductDesc}>
                         {data.description.length > 100
                           ? data.description.substring(0, 200) + "..."
                           : data.description}
-                      </h3>
+                      </h3> */}
                     </div>
                     <div className={styles.FootBottom}>
                       <div className={styles.NameCont}>
-                        <h3 className={styles.NameText}>{data.title}</h3>
+                        <h4 className={styles.NameText}>{data.title}</h4>
                       </div>
                       <div className={styles.Price}>
                         <h3 className={styles.PriceText}>{data.price}$</h3>
