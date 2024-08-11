@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import styles from "./index.module.scss"
 import { VscAccount } from "react-icons/vsc";
+import { IoMenu } from "react-icons/io5";
 
 const Header = () => {
   return (
@@ -34,6 +35,7 @@ const Header = () => {
           <VscAccount
             style={{ color: "white", fontSize: "20px", cursor: "pointer" }}
           />
+          <IoMenu className={styles.menu}/>
         </div>
       </div>
     </>
