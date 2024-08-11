@@ -56,11 +56,6 @@ const handleToggleDarkMode = () => {
                   </div>
                   <div className={styles.cardFoot}>
                     <div className={styles.FootHead}>
-                      {/* <h3 className={styles.ProductDesc}>
-                        {data.description.length > 100
-                          ? data.description.substring(0, 200) + "..."
-                          : data.description}
-                      </h3> */}
                     </div>
                     <div className={styles.FootBottom}>
                       <div className={styles.NameCont}>
