@@ -50,7 +50,7 @@
   }
 }
 
-.lightMode {  /* <-- Light mode styles */
+.lightMode {
   background-color: #ffffff;
   color: #000000;
 
@@ -65,7 +65,7 @@
   }
 }
 
-.darkMode {  /* <-- Dark mode styles */
+.darkMode {
   background-color: #121212;
   color: #ffffff;
 
@@ -79,4 +79,16 @@
     color: #ffffff;
   }
   
+}
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 20px;
 }
