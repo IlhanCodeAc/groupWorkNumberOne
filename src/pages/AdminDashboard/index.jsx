@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../../components/Container";
 import styles from "./style.module.scss";
-import identIcon from "./imgs/identIcon.png";
 
 const AdminDashboard = () => {
   return (
